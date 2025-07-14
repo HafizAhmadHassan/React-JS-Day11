@@ -4,12 +4,20 @@ import User from './User';
 import Header from './Header';
 import Login, { Profile, Settings, userKey } from './UserComponent';
 import WithouJSX from './WithouJSX';
+import ToDo from './ToDo';
+
 function App() {
   const [count, setCount] = useState(0);
   alert(sum())
+
+  const fruit=(name)=>{
+    alert(name)
+  }
   return (
     <>
       <Header />
+      <ToDo/>
+      <button onClick={()=>fruit("apple")}>Apple</button>
       <WithouJSX/>
       <h1>code Step by Step</h1>
       <h1>Hello React 19</h1>
