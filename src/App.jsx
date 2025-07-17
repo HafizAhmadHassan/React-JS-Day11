@@ -5,16 +5,57 @@ import Header from './Header';
 import Login, { Profile, Settings, userKey } from './UserComponent';
 import WithouJSX from './WithouJSX';
 import ToDo from './ToDo';
+import Counter from './Counter';
+
+/* This is code modification for Lec 14-15*/
+
 
 function App() {
   const [count, setCount] = useState(0);
   alert(sum())
+/* This is code modification/added for Lec 14-15 */
+  const [fruits, setFruit] = useState("Apple");
+  
+  const [Display, setDisplay] = useState(true);
+  
+  const handleFruit=()=>{
+    setFruit("Banana")
+  }
+
+/* This is code modification/added for Lec 14-15 */
+
 
   const fruit=(name)=>{
     alert(name)
   }
+
   return (
     <>
+
+    /* This is code modification/added for Lec 16 */
+   <h1> This is toggle exercise</h1>
+{/*  Display? <h1>This is dispaly</h1>:null  
+if display variable exist print heading else null */}
+    <button onClick={()=>setDisplay(!Display)}>Toggle</button>
+
+    {
+      Display? <h1>This is toggle dispaly</h1>:null 
+    }
+
+
+    
+
+    /* This is code modification/added for Lec 16 */
+
+
+    /* This is code modification/added for Lec 14-15 */
+
+    <Counter/>
+    <h1>{fruits}</h1>
+    <button onClick={handleFruit}> Change Fruits</button>
+
+    /* This is code modification/added for Lec 14-15 */
+
       <Header />
       <ToDo/>
       <button onClick={()=>fruit("apple")}>Apple</button>
