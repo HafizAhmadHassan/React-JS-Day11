@@ -11,7 +11,7 @@ import Props2 from './Props2';
 import PropsObjective3 from './PropsObjective3';
 import PropsCondition from './PropsCondition';
 /* This is code modification for Lec 14-15*/
-
+import Skills from './Skills';
 
 function App() {
   const [val,setVal]=useState("");
@@ -250,6 +250,13 @@ if display variable exist print heading else null */}
       <button onClick={()=>myFunctionToExploreArrowArguemtnsWithState(20)}>Click Work with() </button>
 
         
+      </div>
+
+      <div>
+        {/* Lec 22 */}
+
+        <h1>Lec 22: Check boxes</h1>
+        <Skills/>
       </div>
     </>
   );
