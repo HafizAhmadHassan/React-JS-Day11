@@ -14,6 +14,7 @@ import PropsCondition from './PropsCondition';
 
 
 function App() {
+  const [val,setVal]=useState("")
   const [count, setCount] = useState(0);
   /* alert(sum()) */
 
@@ -80,6 +81,9 @@ function App() {
       {/* This is code modification for Lec 18*/}
 
 
+
+
+
     {/* This is code modification for Lec 17*/}
     <h1>{conditioncount}</h1>
     
@@ -141,6 +145,13 @@ if display variable exist print heading else null */}
       <Profile />
       <Settings />
       <h1>{userKey}</h1>
+
+      {/* This is code modification for Lec 20*/}
+      <h1> Get Input Field Value</h1>
+      
+      <input type="text" value={val} onChange={(event)=>setVal(event.target.value)} placeholder='Enter username' />
+      <h1>{val}</h1>
+      <button onClick={()=>setVal("")}>Clear</button>
     </>
   );
 }
